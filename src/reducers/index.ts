@@ -1,7 +1,6 @@
 import * as vl from 'vega-lite';
 import {
   Action,
-  AUTHENTICATE,
   EXPORT_VEGA,
   LOG_ERROR,
   PARSE_SPEC,
@@ -303,14 +302,11 @@ export default (state: State = DEFAULT_STATE, action: Action): State => {
         ...state,
         editorRef: action.editorRef,
       };
-    case AUTHENTICATE:
-      return {
-        ...state,
-        isAuthenticated: action.isAuthenticated,
-      };
     case RECEIVE_CURRENT_USER:
       return {
         ...state,
+        isAuthenticated: action.isAuthenticated,
+        name: action.name,
         profilePicUrl: action.profilePicUrl,
       };
     default:

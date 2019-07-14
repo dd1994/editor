@@ -12,6 +12,7 @@ export function mapStateToProps(state: State, ownProps) {
     lastPosition: state.lastPosition,
     manualParse: state.manualParse,
     mode: state.mode,
+    name: state.name,
     profilePicUrl: state.profilePicUrl,
     vegaLiteSpec: state.vegaLiteSpec,
     vegaSpec: state.vegaSpec,
@@ -23,10 +24,9 @@ export function mapDispatchToProps(dispatch: Dispatch<EditorActions.Action>) {
   return bindActionCreators(
     {
       exportVega: EditorActions.exportVega,
-      isLoggedIn: EditorActions.isLoggedIn,
       parseSpec: EditorActions.parseSpec,
-      setConfig: EditorActions.setConfig,
       receiveCurrentUser: EditorActions.receiveCurrentUser,
+      setConfig: EditorActions.setConfig,
       setScrollPosition: EditorActions.setScrollPosition,
       toggleAutoParse: EditorActions.toggleAutoParse,
       updateVegaSpec: EditorActions.updateVegaSpec,

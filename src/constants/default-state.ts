@@ -22,6 +22,7 @@ export interface State {
   logs: boolean;
   manualParse: boolean;
   mode: Mode;
+  name: string;
   navItem: string;
   sidePaneItem: string;
   parse: boolean;
@@ -54,6 +55,7 @@ export const DEFAULT_STATE: State = {
   logs: false,
   manualParse: false,
   mode: Mode.VegaLite,
+  name: '',
   navItem: NAVBAR.Logs,
   parse: false,
   profilePicUrl: '',
